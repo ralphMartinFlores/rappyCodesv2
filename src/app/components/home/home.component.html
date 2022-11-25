@@ -1,0 +1,147 @@
+<div class="hero">
+    <div class="hero__content">
+        <h1>Hi 👋, I'm Ralph Martin Flores</h1>
+        <p>A fresh graduate and Web Developer in Olongapo City, I  enjoy creating products that are functional and look pleasing to the eye.</p>
+        <div class="scrolldown">
+            <div class="chevrons">
+                <div class="chevrondown"></div>
+                <div class="chevrondown"></div>
+            </div>
+        </div>
+        <label class="switch">
+            <input type="checkbox" (click)="checkSwitch()" [(ngModel)]="isChecked">
+            <span class="slider"></span>
+        </label>
+    </div>
+    <div class="hero__background">
+        <label class="switch">
+            <input type="checkbox" (click)="checkSwitch()" [(ngModel)]="isChecked">
+            <span class="slider"></span>
+        </label>
+    </div>
+</div>
+<div class="about" id="about">
+    <div class="container">
+        <div class="about__content">
+            <h1>About Me</h1>
+            <p>Ever since I was introduced to HTML & CSS in my first year at College, I immediately fell in love with the idea of making clean and good looking interfaces for the web. Everyday, my hunger to learn more about the markup and the cascade grew, and continues to do so.</p>
+            <p>As I've grown to where I am today as a developer, I got the opportunity to work with and be mentored by senior developers that shaped and elevated my expectations for what should be included in any web application in terms of the design and even user experience.</p>
+            <p>When I'm not coding, I like to watch anime and comic book shows, play basketball or video games with my friends, and occasionally ride a bike.</p>
+        </div>
+        <div>
+            <img src="assets/images/aboutme-illustration.webp" alt="About Me Illustration" loading="lazy">
+        </div>
+    </div>
+</div>
+<div class="skills">
+    <div class="container">
+        <div class="skills__content">
+            <h1>My Skills</h1>
+            <p>Throughout the applications that I was a part of building during my education, I've grasped different ideas about Web Development, and those ideas helped me to create web applications that not only look good, but also function well.</p>
+        </div>
+        <div class="skills__grid">
+            <div>
+                <div class="skills__card">
+                    <img src="assets/images/html-logo.webp" alt="HTML logo" loading="lazy">
+                </div>
+                <p>HTML</p>
+            </div>
+            <div>
+                <div class="skills__card">
+                    <img src="assets/images/css-logo.webp" alt="HTML logo" loading="lazy">
+                </div>
+                <p>CSS</p>
+            </div>
+            <div>
+                <div class="skills__card">
+                    <img src="assets/images/js-logo.webp" alt="JavaScript logo" loading="lazy">
+                </div>
+                <p>JavaScript</p>
+            </div>
+            <div>
+                <div class="skills__card">
+                    <img src="assets/images/angular-logo.webp" alt="Angular logo" loading="lazy">
+                </div>
+                <p>Angular</p>
+            </div>
+            <div>
+                <div class="skills__card">
+                    <img src="assets/images/php-logo.webp" alt="PHP logo" loading="lazy">
+                </div>
+                <p>PHP</p>
+            </div>
+            <div>
+                <div class="skills__card">
+                    <img src="assets/images/sql-logo.webp" alt="MySQL logo" loading="lazy">
+                </div>
+                <p>MySQL</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="projects">
+    <div class="container">
+        <div class="projects__content">
+            <h1>My Projects</h1>
+            <p>Take a look at the sites and applications that I've spent my time on that gave me some of the crucial learnings I have right now as a developer.</p>
+        </div>
+        <div class="projects__grid">
+            <div class="projects__card">
+                <img src="assets/images/bfc-project-banner-1.webp" alt="BFC Project banner" loading="lazy">
+                <div class="projects__card__content">
+                    <div>
+                        <h3>But First, Coffee</h3>
+                        <p>A landing page for a popular coffee shop in Olongapo City. Made with HTML, CSS and VanillaJS.</p>
+                    </div>
+                    <button routerLink="/bfc-olongapo">Learn More</button>
+                </div>
+            </div>
+            <div class="projects__card">
+                <img src="assets/images/gocery-project-banner.webp" alt="Gocery Project banner" loading="lazy">
+                <div class="projects__card__content">
+                    <div>
+                        <h3>Gocery (2022)</h3>
+                        <p>An e-commerce application dedicated to selling groceries built with Angular.</p>
+                    </div>
+                    <button routerLink="/gocery">Learn More</button>
+                </div>
+            </div>
+            <div class="projects__card">
+                <img src="assets/images/kireivalorant-projectbanner.webp" alt="BFC Project banner" loading="lazy">
+                <div class="projects__card__content">
+                    <div>
+                        <h3>Kirei - Valorant</h3>
+                        <p>Contains core information about the popular FPS game, Valorant. Powered by the unofficial Valorant API.</p>
+                    </div>
+                    <button routerLink="/kireivalorant">Learn More</button>
+                </div>
+            </div>
+        </div>
+        <button class="projects__viewallbtn" routerLink="/projects">View All</button>
+    </div>
+</div>
+<div class="contact">
+    <div class="container">
+        <div>
+            <img src="assets/images/contact-me-illustration.webp" alt="Email illustration" loading="lazy">
+        </div>
+        <div class="contact__content">
+            <h1>Let's build something together</h1>
+            <p>If you're looking for a developer, have a question, or just want to connect, don't hesitate to get in touch 👇</p>
+            <a href="mailto: rappycodes@gmail.com">rappycodes@gmail.com</a>
+        </div>
+    </div>
+</div>
+<div class="resume">
+    <div class="container">
+        <div class="resume__content">
+            <h1>See My Resume</h1>
+            <p>Get to know more about my details by downloading my resume 👇</p>
+            <a class="resume__button" href="assets/images/resume.pdf" download>Download Resume</a>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
+<button *ngIf="isShow" (click)="gotoTop()" class="scroll-top--btn">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>

@@ -1,0 +1,73 @@
+<main>
+    <div class="main__content">
+        <div class="content__wrapper">
+            <div class="project__title">
+                <button class="main__backbtn" (click)="back()">
+                    <i class="fa-solid fa-arrow-left-long"></i>
+                </button>
+                <h1>Kirei - Valorant</h1>
+                <div class="stack__flex">
+                    <div class="stack__tech">
+                        <i class="fa-brands fa-angular"></i>
+                        <p>Angular</p>
+                    </div>
+                    <div class="stack__tech">
+                        <i class="fa-brands fa-bootstrap"></i>
+                        <p>Bootstrap 5</p>
+                    </div>
+                    <div class="stack__tech">
+                        <i class="fa-brands fa-github"></i>
+                        <a href="https://github.com/ralphMartinFlores/kirei-valorant" target="_blank" rel="noopener noreferrer">Repository</a>
+                    </div>
+                    <div class="stack__tech">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        <a href="https://kirei-valorant.netlify.app/" target="_blank" rel="noopener noreferrer">Visit Site</a>
+                    </div>
+                    <div class="stack__tech">
+                        <i class="fa-solid fa-person"></i>
+                        <p>Personal</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project__introduction">
+                <p>Kirei is the Japanese translation of "Beautiful", so the name of this site can also be Beautiful Valorant, this site contains latest information about the game such as agents that can be played, maps, weapon that can be used, cards to more identify yourself and bundles to elevate the gaming experience. 
+                </p>
+                <p>This site, which was created with Angular and Bootstrap 5, has simple navigation, the recognizable color palette from the brand itself, and gorgeous in-game assets taken directly from the open-source Valorant API, which can be found 
+                    <a href="https://valorant-api.com/" target="_blank" rel="noopener noreferrer">here.</a>
+                </p>
+            </div>
+            <div class="project__banner">
+                <img src="assets/images/kireivalorant-fullscreenshot.webp" alt="Kirei Valorant Full Screenshot" loading="lazy">
+            </div>
+            <div class="project__banner">
+                <img src="assets/images/kireivalorant-full-screenshot-1.webp" alt="Kirei Valorant Full Screenshot" loading="lazy">
+            </div>
+            <div class="project__objectives">
+                <img src="assets/images/goals-illustration.webp" alt="Goals illustration" loading="lazy">
+                <div>
+                    <h1>Objectives & Goals</h1>
+                    <p>With this project, I'm mostly trying to gain experience calling open APIs. Since I play the game myself and thought it would be wonderful to combine two things I enjoy doing, I chose the public Valorant API.
+                    </p>
+                </div>
+            </div>
+            <div class="project__problems">
+                <div>
+                    <h1>Problems and Thought Process</h1>
+                    <p>With some API endpoints, it was simple for me to iterate through the data and display it on the HTML page, but with others, it was more difficult. I finally found a solution by using Angular's KeyValue pipe, which was simple to learn and effectively fixed my problem of trying to access some of the data that I received from the API.</p>
+                </div>
+                <img src="assets/images/problems-illustration.webp" alt="Problem solving illustration" loading="lazy">
+            </div>
+            <div class="project__lesson">
+                <img src="assets/images/lessons-illustration.webp" alt="Lesson learned illustration" loading="lazy">
+                <div>
+                    <h1>Lessons Learned</h1>
+                    <p>In addition to learning how to utilize Angular's KeyValue pipe to turn objects into an array of key value pairs that can be quickly looped through for display, I also learnt that with Angular, we can more easily perform HTTP requests to APIs.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button *ngIf="isShow" (click)="gotoTop()" class="scroll-top--btn">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <app-footer></app-footer>
+</main>

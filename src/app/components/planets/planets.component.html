@@ -1,0 +1,74 @@
+<main>
+    <div class="main__content">
+        <div class="content__wrapper">
+            <div class="project__title">
+                <button class="main__backbtn" (click)="back()">
+                    <i class="fa-solid fa-arrow-left-long"></i>
+                </button>
+                <h1>The Planets</h1>
+                <div class="stack__flex">
+                    <div class="stack__tech">
+                        <i class="fa-brands fa-angular"></i>
+                        <p>Angular</p>
+                    </div>
+                    <div class="stack__tech">
+                        <i class="fa-brands fa-angular"></i>
+                        <p>Angular Material</p>
+                    </div>
+                    <div class="stack__tech">
+                        <i class="fa-brands fa-github"></i>
+                        <a href="https://github.com/ralphMartinFlores/the-planets" target="_blank" rel="noopener noreferrer">Repository</a>
+                    </div>
+                    <div class="stack__tech">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        <a href="https://planets-primero.netlify.app" target="_blank" rel="noopener noreferrer">Visit Site</a>
+                    </div>
+                    <div class="stack__tech">
+                        <i class="fa-solid fa-person"></i>
+                        <p>Personal</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project__introduction">
+                <p>This is a slightly modified version of Frontend Mentor's The Planets challenge, this simple site contains beautiful images and information about the planets in our Solar System.</p>
+                <p>Because I decided that I could have the similar experience with tabs, I developed the project using Angular and Angular Material for easy Component creation for each Planet and easy routing. This slight alteration alone sets it apart from the version of Frontend Mentor.</p>
+            </div>
+            <div class="project__banner">
+                <img src="assets/images/planets-full-screenshot.webp" alt="Planets Full Screenshot" loading="lazy">
+            </div>
+            <div class="project__banner">
+                <img src="assets/images/planets-full-screenshot-1.webp" alt="Planets Full Screenshot" loading="lazy">
+            </div>
+            <div class="project__banner">
+                <img src="assets/images/planets-full-screenshot-2.webp" alt="Planets Full Screenshot" loading="lazy">
+            </div>
+            <div class="project__objectives">
+                <img src="assets/images/goals-illustration.webp" alt="Goals illustration" loading="lazy">
+                <div>
+                    <h1>Objectives & Goals</h1>
+                    <p>I mainly wanted to be able to transfer an Angular-made static site to Netlify and just recreate the challenge using the framework.</p>
+                </div>
+            </div>
+            <div class="project__problems">
+                <div>
+                    <h1>Problems and Thought Process</h1>
+                    <p>Although I didn't have many issues while developing this project, I did run across one as I was about to launch the site. Once I developed the project and uploaded it to Netlify, the routing stopped working; it turns out that it is more difficult than not using a framework.</p>
+                    <p>Fortunately, I was able to resolve that one issue after discovering an online guide that addresses how to correctly publish an Angular project to Netlify.</p>
+                </div>
+                <img src="assets/images/problems-illustration.webp" alt="Problem solving illustration" loading="lazy">
+            </div>
+            <div class="project__lesson">
+                <img src="assets/images/lessons-illustration.webp" alt="Lesson learned illustration" loading="lazy">
+                <div>
+                    <h1>Lessons Learned</h1>
+                    <p>The secret to getting our newly published site developed with Angular to Netlify routing to function is customizing our angular.json file and creating a _redirects file inside of our src folder. This project being the second to be uploaded to Netlify taught me that the hosting service is in fact trustworthy.</p>
+                    <p>I will be sticking to Netlify for quite a while, I suppose 😄</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button *ngIf="isShow" (click)="gotoTop()" class="scroll-top--btn">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <app-footer></app-footer>
+</main>

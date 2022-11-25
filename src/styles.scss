@@ -1,1 +1,46 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --ff-primary: 'General Sans', serif;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    transition: all .3s;
+}
+html, body {
+    height: 100%;
+}
+body {
+    -webkit-font-smoothing: antialiased;
+    --container-color: #faeee7;
+    --subcontainer-color: #fffffe;
+    --headline-color: #33272a;
+    --paragraph-color: #594a4e;
+    --button-color: #ff8ba7;
+    --button-hover-color: #FF5880;
+    --hero-background: url('assets/images/lightmodepatternbg.svg');
+}
+body.dark-theme {
+    -webkit-font-smoothing: antialiased;
+    --container-color: #16161a;
+    --subcontainer-color: #242629;
+    --headline-color: #fffffe;
+    --paragraph-color: #94a1b2;
+    --button-color: #7f5af0;
+    --button-hover-color: #5B2BEC;
+    --hero-background: url('assets/images/darkmodepatternbg.svg');
+}
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+input, button, textarea, select {
+    font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+#root, #__next {
+    isolation: isolate;
+}

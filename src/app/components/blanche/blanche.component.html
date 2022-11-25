@@ -1,0 +1,70 @@
+<main>
+    <div class="main__content">
+        <div class="content__wrapper">
+            <div class="project__title">
+                <button class="main__backbtn" (click)="back()">
+                    <i class="fa-solid fa-arrow-left-long"></i>
+                </button>
+                <h1>Blanche</h1>
+                <div class="stack__flex">
+                    <div class="stack__tech">
+                        <i class="fa-brands fa-html5"></i>
+                        <p>HTML</p>
+                    </div>
+                    <div class="stack__tech">
+                        <i class="fa-brands fa-css3-alt"></i>
+                        <p>CSS</p>
+                    </div>
+                    <div class="stack__tech">
+                        <i class="fa-brands fa-html5"></i>
+                        <p>JavaScript</p>
+                    </div>
+                    <div class="stack__tech">
+                        <i class="fa-brands fa-github"></i>
+                        <a href="https://github.com/ralphMartinFlores/blanche_IFL_OJT" target="_blank" rel="noopener noreferrer">Repository</a>
+                    </div>
+                    <div class="stack__tech">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        <a href="https://blanche-primero.netlify.app" target="_blank" rel="noopener noreferrer">Visit Site</a>
+                    </div>
+                    <div class="stack__tech">
+                        <i class="fa-solid fa-person"></i>
+                        <p>Personal</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project__introduction">
+                <p>This is another landing page task for me from <a href="https://iformatlogic.com/" target="_blank" rel="noopener noreferrer">iFormatLogic</a>, Blanche is a seller of high quality products made of cotton. This was also made first in Photoshop in which I converted it into HTML and CSS code after.</p>
+                <p>I used Avocode to extract the assets from the PSD file for a more accurate recreation of the design with code.</p>
+            </div>
+            <div class="project__banner">
+                <img src="assets/images/blanche-full-screenshot.webp" alt="Blanche Full Screenshot" loading="lazy">
+            </div>
+            <div class="project__objectives">
+                <img src="assets/images/goals-illustration.webp" alt="Goals illustration" loading="lazy">
+                <div>
+                    <h1>Objectives & Goals</h1>
+                    <p>The psd design used a blurred image with the exact same shape as the upper portion of the sofa, thus I knew exactly where area of the hero section image I wanted to blur. I also wanted to practice my absolute positioning skills here as I think it was the best approach with the call to action.</p>
+                </div>
+            </div>
+            <div class="project__problems">
+                <div>
+                    <h1>Problems and Thought Process</h1>
+                    <p>Time wasn't exactly my friend with this project, so I wanted to try something different. To make room for the hero text, I blurred the top of the sofa using Adobe Photoshop. I also had a ton of requested revisions of texts being too big, I solved this by using pixels for the font sizes instead of ems.</p>
+                </div>
+                <img src="assets/images/problems-illustration.webp" alt="Problem solving illustration" loading="lazy">
+            </div>
+            <div class="project__lesson">
+                <img src="assets/images/lessons-illustration.webp" alt="Lesson learned illustration" loading="lazy">
+                <div>
+                    <h1>Lessons Learned</h1>
+                    <p>I learned how to blur part of an image with Photoshop. I also learned to take a really close look when trying to recreate a PSD design to code, font sizes should always be at an optimal size while still being readable by the majority of your users.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button *ngIf="isShow" (click)="gotoTop()" class="scroll-top--btn">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <app-footer></app-footer>
+</main>
