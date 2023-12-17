@@ -1,0 +1,74 @@
+<main>
+    <div class="main__content">
+        <div class="content__wrapper">
+            <div class="project__title">
+                <button class="main__backbtn" (click)="back()">
+                    <i class="fa-solid fa-arrow-left-long"></i>
+                </button>
+                <h1>Cannon Motors - Section Recreation</h1>
+                <div class="stack__flex">
+                    <div class="stack__tech">
+                        <i class="fa-brands fa-wordpress"></i>
+                        <p>Wordpress</p>
+                    </div>
+                    <div class="stack__tech">
+                        <i class="fa-brands fa-elementor"></i>
+                        <p>Elementor</p>
+                    </div>
+                    <div class="stack__tech">
+                        <i class="fa-brands fa-js"></i>
+                        <p>JavaScript</p>
+                    </div>
+                    <div class="stack__tech">
+                        <i class="fa-solid fa-person"></i>
+                        <p>Work</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project__introduction">
+                <p>
+                    I recreated a dynamic zooming video section inspired by the Polestar website for Cannon Motors using WordPress and Elementor. To see the original inspiration from Polestar, visit their website <a href="https://www.polestar.com/global/" target="_blank" rel="noopener noreferrer">here</a> 👈
+                </p>
+                <p>To see the video demonstration of my work, you can go <a href="https://youtu.be/mZScQk_EWrA" target="_blank" rel="noopener noreferrer">here</a> 👈</p>
+            </div>
+            <div class="project__banner">
+                <img src="assets/images/CANNON-MOTORS-AUS.png" alt="Cannon Motors Zooming Video Section Screenshot" loading="lazy">
+                <img style="margin-top: 1.25rem;" src="assets/images/cannon-motors-recreated-section-code.png" alt="Cannon Motors Zooming Video Section Code Screenshot" loading="lazy">
+            </div>
+            <div class="project__objectives">
+                <img src="assets/images/goals-illustration.webp" alt="Goals illustration" loading="lazy">
+                <div>
+                    <h1>Objectives & Goals</h1>
+                    <p>
+                        The main goals are to use Elementor to make a captivating video that plays when it's on the user's screen and goes back to its original state when not visible. The aim is also to get better at using Elementor and improve skills in JavaScript DOM during the process.
+                    </p>
+                </div>
+            </div>
+            <div class="project__problems">
+                <div>
+                    <h1>Problems and Thought Process</h1>
+                    <p>
+                        Dissecting the Polestar website's video section presented challenges, particularly in understanding how the video stayed on the screen as users scrolled. The initial focus on zooming worked well, but maintaining visibility proved tricky. 
+                    </p>
+                    <p>
+                        To unravel this, I took a full-page screenshot, revealing that the section was longer, allowing for scrolling while keeping the video on the screen. Armed with this insight, I adjusted the video element's position to sticky and increased its container's height. Leveraging JavaScript and jQuery, I successfully recreated the immersive experience.
+                    </p>
+                </div>
+                <img src="assets/images/problems-illustration.webp" alt="Problem solving illustration" loading="lazy">
+            </div>
+            <div class="project__lesson">
+                <img src="assets/images/lessons-illustration.webp" alt="Lesson learned illustration" loading="lazy">
+                <div>
+                    <h1>Lessons Learned</h1>
+                    <p>
+                        I learned to use the `getBoundingClientRect()` method and Elementor's sticky positioning. When manually adjusting the video position in Elementor didn't work, I turned to jQuery's CSS method to make the zooming in and out effect happen successfully.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button *ngIf="isShow" (click)="gotoTop()" class="scroll-top--btn">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <app-footer></app-footer>
+</main>

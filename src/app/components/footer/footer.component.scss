@@ -2,14 +2,14 @@ footer {
     background-color: var(--container-color);
 }
 p {
-    font-family: 'General Sans', sans-serif;
+    font-family: var(--ff-primary);
     font-weight: 400;
     font-size: 1em;
     line-height: 1.6;
     color: var(--paragraph-color);
 }
 h1 {
-    font-family: 'General Sans', sans-serif;
+    font-family: var(--ff-primary);
     font-weight: 600;
     font-size: 2em;
     color: var(--headline-color);

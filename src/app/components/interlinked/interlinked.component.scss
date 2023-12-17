@@ -1,0 +1,288 @@
+main {
+  background-color: var(--subcontainer-color);
+}
+h1 {
+  font-family: var(--ff-primary);
+  font-size: 3.5rem;
+  color: var(--headline-color);
+}
+p {
+  font-family: var(--ff-primary);
+  line-height: 1.6;
+  font-size: clamp(1em, 2.5vw, 1.125em);
+  color: var(--paragraph-color);
+  text-align: justify;
+}
+a {
+  text-decoration: none;
+  color: var(--paragraph-color);
+  font-family: var(--ff-primary);
+}
+.main__content {
+  padding: 3.5rem 1rem;
+}
+.main__backbtn {
+  background-color: transparent;
+  padding: 1rem;
+  border-radius: 6.5rem;
+  margin-bottom: 2rem;
+  border: none;
+  cursor: pointer;
+  i {
+      font-size: 2rem;
+      color: var(--headline-color);
+  }
+  &:hover {
+      background-color: var(--button-hover-color);
+  }
+}
+.content__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.stack__flex {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  i {
+      color: var(--paragraph-color);
+  }
+}
+.stack__tech {
+  padding: 0.5rem 1.5rem;
+  background-color: var(--container-color);
+  border-radius: 6.5rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  i {
+      font-size: 1rem;
+  }
+}
+.project__introduction {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--container-color);
+  padding: 1rem;
+  border-left: 4px solid var(--headline-color);
+  border-top-right-radius: 0.625rem;
+  border-bottom-right-radius: 0.625rem;
+}
+.project__objectives, .project__problems, .project__lesson {
+  div:first-of-type {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+  }
+  img {
+      display: none;
+  }
+}
+.scroll-top--btn {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  text-align: center;
+  width: 3.125rem;
+  height: 3.125rem;
+  border-radius: 6.5rem;
+  background-color: var(--button-color);
+  color: var(--headline-color);
+  outline: none;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  &:hover {
+      background-color: var(--button-hover-color);
+  }
+}
+iframe {
+  max-width: 100%;
+  margin-top: 1.875rem;
+  aspect-ratio: 16 / 9;
+  height: auto;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .main__content {
+      padding: 3.5rem;
+  }
+  .content__wrapper {
+      gap: 3rem;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .main__content {
+      max-width: 70%;
+      margin: 0 auto;
+      padding: 8rem 0;
+  }
+  .content__wrapper {
+      gap: 8rem;
+  }
+  .project__introduction {
+      p {
+          max-width: 85ch;
+      }
+  }
+  .project__objectives, .project__problems, .project__lesson {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      img {
+          display: grid;
+          max-width: 450px;
+          justify-self: center;
+      }
+  }
+}
+ul {
+  --col-gap: 2rem;
+  --row-gap: 2rem;
+  --line-w: 0.25rem;
+  display: grid;
+  grid-template-columns: var(--line-w) 1fr;
+  grid-auto-columns: max-content;
+  column-gap: var(--col-gap);
+  list-style: none;
+  width: min(60rem, 90%);
+  margin-inline: auto;
+  font-family: var(--ff-primary)
+}
+/* line */
+ul::before {
+  content: "";
+  grid-column: 1;
+  grid-row: 1 / span 20;
+  background: rgb(225, 225, 225);
+  border-radius: calc(var(--line-w) / 2);
+}
+/* columns*/
+/* row gaps */
+ul li:not(:last-child) {
+  margin-bottom: var(--row-gap);
+}
+/* card */
+ul li {
+  grid-column: 2;
+  --inlineP: 1.5rem;
+  margin-inline: var(--inlineP);
+  grid-row: span 2;
+  display: grid;
+  grid-template-rows: min-content min-content min-content;
+}
+/* date */
+ul li .date {
+  --dateH: 3rem;
+  height: var(--dateH);
+  margin-inline: calc(var(--inlineP) * -1);
+  text-align: center;
+  background-color: var(--accent-color);
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 700;
+  display: grid;
+  place-content: center;
+  position: relative;
+  border-radius: calc(var(--dateH) / 2) 0 0 calc(var(--dateH) / 2);
+}
+/* date flap */
+ul li .date::before {
+  content: "";
+  width: var(--inlineP);
+  aspect-ratio: 1;
+  background: var(--accent-color);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2) 100%, transparent);
+  position: absolute;
+  top: 100%;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  right: 0;
+}
+/* circle */
+ul li .date::after {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  aspect-ratio: 1;
+  background: var(--bgColor);
+  border: 0.3rem solid var(--accent-color);
+  border-radius: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+  right: calc(100% + var(--col-gap) + var(--line-w) / 2);
+}
+/* title descr */
+ul li .title,
+ul li .descr {
+  background: var(--bgColor);
+  position: relative;
+  padding-inline: 1.5rem;
+}
+ul li .title {
+  overflow: hidden;
+  padding-block-start: 1.5rem;
+  padding-block-end: 1rem;
+  font-weight: 500;
+}
+ul li .descr {
+  padding-block-end: 1.5rem;
+  font-weight: 300;
+}
+/* shadows */
+// ul li .title::before,
+// ul li .descr::before {
+//   content: "";
+//   position: absolute;
+//   width: 90%;
+//   height: 0.5rem;
+//   background: rgba(0, 0, 0, 0.5);
+//   left: 50%;
+//   border-radius: 50%;
+//   filter: blur(4px);
+//   transform: translate(-50%, 50%);
+// }
+ul li .title::before {
+  bottom: calc(100% + 0.125rem);
+}
+ul li .descr::before {
+  z-index: -1;
+  bottom: 0.25rem;
+}
+@media (min-width: 40rem) {
+  ul {
+    grid-template-columns: 1fr var(--line-w) 1fr;
+  }
+  ul::before {
+    grid-column: 2;
+  }
+  ul li:nth-child(odd) {
+    grid-column: 1;
+  }
+  ul li:nth-child(even) {
+    grid-column: 3;
+  }
+  /* start second card */
+  ul li:nth-child(2) {
+    grid-row: 2/4;
+  }
+  ul li:nth-child(odd) .date::before {
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    left: 0;
+  }
+  ul li:nth-child(odd) .date::after {
+    transform: translate(-50%, -50%);
+    left: calc(100% + var(--col-gap) + var(--line-w) / 2);
+  }
+  ul li:nth-child(odd) .date {
+    border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
+  }
+}
+.credits {
+  margin-top: 1rem;
+  text-align: right;
+}
+.credits a {
+  color: var(--color);
+}

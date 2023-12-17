@@ -13,6 +13,10 @@ import { BikeodysseyComponent } from './components/bikeodyssey/bikeodyssey.compo
 import { BlancheComponent } from './components/blanche/blanche.component';
 import { KireiComponent } from './components/kirei/kirei.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { InterlinkedComponent } from './components/interlinked/interlinked.component';
+import { SilpluginComponent } from './components/silplugin/silplugin.component';
+import { CannonmotorsComponent } from './components/cannonmotors/cannonmotors.component';
+import { InterlinkedNewComponent } from './components/interlinked-new/interlinked-new.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +29,11 @@ import { FooterComponent } from './components/footer/footer.component';
     BikeodysseyComponent,
     BlancheComponent,
     KireiComponent,
-    FooterComponent
+    FooterComponent,
+    InterlinkedComponent,
+    SilpluginComponent,
+    CannonmotorsComponent,
+    InterlinkedNewComponent
   ],
   imports: [
     BrowserModule,

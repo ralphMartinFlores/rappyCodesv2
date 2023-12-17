@@ -1,0 +1,82 @@
+<main>
+    <div class="main__content">
+        <div class="content__wrapper">
+            <div class="project__title">
+                <button class="main__backbtn" (click)="back()">
+                    <i class="fa-solid fa-arrow-left-long"></i>
+                </button>
+                <h1>Search It Local - Custom WP Plugin</h1>
+                <div class="stack__flex">
+                    <div class="stack__tech">
+                        <i class="fa-brands fa-wordpress"></i>
+                        <p>Wordpress</p>
+                    </div>
+                    <div class="stack__tech">
+                        <i class="fa-brands fa-hubspot"></i>
+                        <p>HubSpot</p>
+                    </div>
+                    <div class="stack__tech">
+                        <i class="fa-brands fa-bootstrap"></i>
+                        <p>Bootstrap 5</p>
+                    </div>
+                    <div class="stack__tech">
+                        <i class="fa-solid fa-person"></i>
+                        <p>Work</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project__introduction">
+                <p>
+                    This is a custom Wordpress plugin, despite the initial client preference against custom plugins. The decision was driven by the need for seamless file import on their staging site. The plugin interfaces with Ezidebit and HubSpot APIs to fetch transaction and deal data, respectively.
+                </p>
+                <p>
+                    This information is then displayed on the WordPress admin dashboard for easy access by client employees, streamlining their workflow. The plugin involves database manipulation, creating a dedicated table for data imported from a local JSON file (containing ClickUp data).
+                </p>
+                <p>
+                    It includes various API calls, date formatting, price calculations, and synchronization of WordPress site table data with HubSpot for seamless data integration. The entire solution is implemented in PHP, with initial development and testing conducted on localhost before deployment to the client's staged WordPress site.
+                </p>
+            </div>
+            <div class="project__banner">
+                <img src="assets/images/SIL.png" alt="SIL Plugin Page Screenshot" loading="lazy">
+            </div>
+            <div class="project__objectives">
+                <img src="assets/images/goals-illustration.webp" alt="Goals illustration" loading="lazy">
+                <div>
+                    <h1>Objectives & Goals</h1>
+                    <p>
+                        To acquaint myself further with WordPress backend development and enhance my PHP development skills, demonstrate progress by consistently updating the backend code incrementally, learn and integrate crucial APIs, such as Ezidebit and HubSpot, and to fetch necessary data. The precision of calculations was also a key focus, especially considering its significance for customers making payments. This comprehensive approach ensured the successful completion of tasks and bolstered the overall reliability and functionality of the backend system.
+                    </p>
+                </div>
+            </div>
+            <div class="project__problems">
+                <div>
+                    <h1>Problems and Thought Process</h1>
+                    <p>
+                        I tackled the project by writing lots of pseudocode and algorithms in paragraphs to handle its complexities systematically. Since there were different APIs and I had to adjust and calculate dates from the data they returned, it was a tough task.
+                    </p>
+                    <p>
+                        Making sure the code was good, especially when dealing with dates connected to the renewal date in HubSpot deals, required me to go back and revise the code multiple times. This careful approach was crucial for managing the complexities of the development and maintaining the overall integrity of the system.
+                    </p>
+                </div>
+                <img src="assets/images/problems-illustration.webp" alt="Problem solving illustration" loading="lazy">
+            </div>
+            <div class="project__lesson">
+                <img src="assets/images/lessons-illustration.webp" alt="Lesson learned illustration" loading="lazy">
+                <div>
+                    <h1>Lessons Learned</h1>
+                    <p>
+                        The development taught me a lot, especially about dealing with specific date formats, especially with HubSpot's requirements for date structures in deal information.
+                    </p>
+                    <p>
+                        I got better at handling JSON files using PHP, figuring out complex data structures from APIs, and understanding different APIs like Ezidebit, which uses SOAP. This broadened my API skills since I mostly worked with REST APIs before.
+                    </p>
+                    <p>I also improved in using the WordPress REST API to put in and work with data in the site's database. The process made me better at manipulating dates and using the ternary operator in PHP. These skills I picked up are now part of my toolkit, making me better prepared for future projects with different challenges.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button *ngIf="isShow" (click)="gotoTop()" class="scroll-top--btn">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <app-footer></app-footer>
+</main>

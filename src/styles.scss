@@ -1,5 +1,5 @@
 :root {
-    --ff-primary: 'General Sans', serif;
+    --ff-primary: 'Work Sans', sans-serif;
 }
 *, *::before, *::after {
     box-sizing: border-box;
@@ -20,6 +20,9 @@ body {
     --button-color: #ff8ba7;
     --button-hover-color: #FF5880;
     --hero-background: url('assets/images/lightmodepatternbg.svg');
+    --feb-timeline-color: #FF5880;
+    --mar-timeline-color: #80FF58;
+    --apr-timeline-color: #5880FF;
 }
 body.dark-theme {
     -webkit-font-smoothing: antialiased;
@@ -27,9 +30,12 @@ body.dark-theme {
     --subcontainer-color: #242629;
     --headline-color: #fffffe;
     --paragraph-color: #94a1b2;
-    --button-color: #7f5af0;
-    --button-hover-color: #5B2BEC;
-    --hero-background: url('assets/images/darkmodepatternbg.svg');
+    --button-color: #2cb67d;
+    --button-hover-color: #239264;
+    --hero-background: url('assets/images/Colored Patterns.svg');
+    --feb-timeline-color: #5B2BEC;
+    --mar-timeline-color: #EC5B2B;
+    --apr-timeline-color: #2BEC5B;
 }
 img, picture, video, canvas, svg {
     display: block;

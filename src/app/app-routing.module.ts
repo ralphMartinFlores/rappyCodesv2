@@ -8,6 +8,10 @@ import { HomeComponent } from './components/home/home.component';
 import { KireiComponent } from './components/kirei/kirei.component';
 import { PlanetsComponent } from './components/planets/planets.component';
 import { ProjectsComponent } from './components/projects/projects.component';
+import { InterlinkedComponent } from './components/interlinked/interlinked.component';
+import { SilpluginComponent } from './components/silplugin/silplugin.component';
+import { CannonmotorsComponent } from './components/cannonmotors/cannonmotors.component';
+import { InterlinkedNewComponent } from './components/interlinked-new/interlinked-new.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -19,6 +23,10 @@ const routes: Routes = [
   { path: 'bikeodyssey', component: BikeodysseyComponent },
   { path: 'blanche', component: BlancheComponent },
   { path: 'kireivalorant', component: KireiComponent },
+  { path: 'interlinked', component: InterlinkedComponent },
+  { path: 'searchitlocal', component: SilpluginComponent },
+  { path: 'cannonmotors', component: CannonmotorsComponent },
+  { path: 'interlinked-new', component: InterlinkedNewComponent },
 ];
 
 @NgModule({

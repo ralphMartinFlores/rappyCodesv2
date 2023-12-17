@@ -1,0 +1,95 @@
+<main>
+    <div class="main__content">
+        <div class="content__wrapper">
+            <div class="project__title">
+                <button class="main__backbtn" (click)="back()">
+                    <i class="fa-solid fa-arrow-left-long"></i>
+                </button>
+                <h1>Interlinked (New)</h1>
+                <div class="stack__flex">
+                    <div class="stack__tech">
+                        <i class="fa-brands fa-laravel"></i>
+                        <p>Laravel</p>
+                    </div>
+                    <div class="stack__tech">
+                        <i class="fa-brands fa-js"></i>
+                        <p>JavaScript</p>
+                    </div>
+                    <div class="stack__tech">
+                        <i class="fa-solid fa-person"></i>
+                        <p>Work</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project__introduction">
+                <p>
+                    In contrast to its predecessor, the new Interlinked platform has undergone a significant upgrade by adopting the Laravel framework, replacing its previous custom MVC implementation. My primary focus was to enhance the UI of this new application.
+                </p>
+            </div>
+            <div class="project__banner">
+                <div>
+                    <img src="assets/images/Interlinked-New/1.png" alt="Interlinked New Screenshot" loading="lazy">
+                    <p style="margin-top: 1rem; max-width: 75ch;">I relocated the "Add Channel" button, originally situated under the tab links, to the right end of the layout. This adjustment aims to create a more aligned and visually cohesive appearance for improved user experience.</p>
+                </div>
+                <div style="margin-top: 1.25rem;">
+                    <img src="assets/images/Interlinked-New/2.png" alt="Interlinked New Screenshot" loading="lazy">
+                    <p style="margin-top: 1rem; max-width: 75ch;">
+                        I eliminated the box shadow on this specific card to prevent redundancy since its parent card already features a shadow.
+                    </p>
+                </div>
+                <div style="margin-top: 1.25rem;">
+                    <img src="assets/images/Interlinked-New/3.png" alt="Interlinked New Screenshot" loading="lazy">
+                    <p style="margin-top: 1rem; max-width: 75ch;">
+                        I repositioned the Order button to the right side of the container to achieve better alignment. Additionally, I removed the shadow from the green card, ensuring consistency with its parent card. To enhance user interaction, I introduced hover effects to the outline buttons positioned beneath it.
+                    </p>
+                </div>
+                <div style="margin-top: 1.25rem;">
+                    <img src="assets/images/Interlinked-New/4.png" alt="Interlinked New Screenshot" loading="lazy">
+                    <p style="margin-top: 1rem; max-width: 75ch;">
+                        I enhanced the user experience by introducing a new empty state. In contrast to the previous version, which only featured plain text, the new empty state is designed to provide a more engaging and visually appealing experience.
+                    </p>
+                </div>
+                <div style="margin-top: 1.25rem;">
+                    <img src="assets/images/Interlinked-New/5.png" alt="Interlinked New Screenshot" loading="lazy">
+                    <p style="margin-top: 1rem; max-width: 75ch;">
+                        I refined the layout for the "My Projects" title, as well as the "View Projects" and "30 Days Activity" buttons, ensuring improved alignment. Additionally, I adjusted the grid on the cards below to enhance overall responsiveness, optimizing the display for various screen sizes.
+                    </p>
+                </div>
+            </div>
+            <div class="project__objectives">
+                <img src="assets/images/goals-illustration.webp" alt="Goals illustration" loading="lazy">
+                <div>
+                    <h1>Objectives & Goals</h1>
+                    <p>
+                        The primary goal of my involvement in this project is to systematically evaluate the application's UI and implement changes that enhance the overall user experience. My role is centered on identifying areas where improvements can be made and applying those changes effectively.
+                    </p>
+                </div>
+            </div>
+            <div class="project__problems">
+                <div>
+                    <h1>Problems and Thought Process</h1>
+                    <p>
+                        Although the application leveraged Bootstrap 5, a notable issue arose with the sidebar, which was originally implemented using vanilla CSS.  
+                    </p>
+                    <p>
+                        This implementation posed challenges for mobile viewing, as it wasn't optimized for smaller screens. To address this, I focused on optimizing mobile responsiveness by reorganizing elements to stack vertically on majority of the pages.
+                    </p>
+                </div>
+                <img src="assets/images/problems-illustration.webp" alt="Problem solving illustration" loading="lazy">
+            </div>
+            <div class="project__lesson">
+                <img src="assets/images/lessons-illustration.webp" alt="Lesson learned illustration" loading="lazy">
+                <div>
+                    <h1>Lessons Learned</h1>
+                    <p>
+                        Throughout this experience, I gained valuable insights into utilizing the SFTP extension for Visual Studio Code (VSCode). This knowledge has proven instrumental in streamlining file transfers and enhancing the efficiency of the development process.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button *ngIf="isShow" (click)="gotoTop()" class="scroll-top--btn">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <app-footer></app-footer>
+</main>
